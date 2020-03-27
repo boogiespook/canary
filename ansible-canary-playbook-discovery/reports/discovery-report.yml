@@ -113,8 +113,8 @@
           lineinfile:
             path: "{{ rpt_base_path }}/index.html"
             insertafter: "^<body>"
-            line: '<img src="img/RH_Consulting_header_2700x750_grey.png" alt="Red Hat Consulting" class="head">'
-            regexp: '<img src="img/RH_Consulting_header_2700x750_grey.png" alt="Red Hat Consulting" class="head">'
+            line: '<img src="img/logo1.png" class="head">'
+            regexp: '<img src="img/logo1.png" class="head">'
             state: "present"
           ignore_errors: True
 
@@ -122,8 +122,8 @@
           lineinfile:
             path: "{{ rpt_base_path }}/index.html"
             insertbefore: "^</body>"
-            line: '<img src="img/RedHat-Header.png" alt="Red Hat" class="foot">'
-            regexp: '<img src="img/RedHat-Header.png" alt="Red Hat" class="foot">'
+            line: '<img src="img/logo1" class="foot">'
+            regexp: '<img src="img/logo1.png" class="foot">'
             state: "present"
           ignore_errors: True
 
@@ -131,8 +131,8 @@
           lineinfile:
             path: "{{ rpt_base_path }}/hosts/{{ host | lower }}.html"
             insertafter: "^<body>"
-            line: '<img src="../img/RedHat-Header.png" alt="Red Hat" class="details-head">'
-            regexp: '<img src="../img/RedHat-Header.png" alt="Red Hat" class="details-head">'
+            line: '<img src="../img/logo2.png" class="details-head">'
+            regexp: '<img src="../img/logo2.png" class="details-head">'
             state: "present"
           with_items: "{{ groups['all'] }}"
           loop_control:
@@ -145,8 +145,8 @@
           lineinfile:
             path: "{{ rpt_base_path }}/hosts/{{ host | lower }}.html"
             insertbefore: "^</body>"
-            line: '<img src="../img/RedHat-Header.png" alt="Red Hat" class="foot">'
-            regexp: '<img src="../img/RedHat-Header.png" alt="Red Hat" class="foot">'
+            line: '<img src="../img/logo2.png" class="foot">'
+            regexp: '<img src="../img/logo2.png" class="foot">'
             state: "present"
           with_items: "{{ groups['all'] }}"
           loop_control:
