@@ -1,4 +1,5 @@
-# Project Canary
+# THIS PROJECT HAS NOW MOVED TO: https://github.com/redhat-cop/canary
+
 
 ## Background
 Project Canary is a discovery tool that leverages Ansible’s built-in fact collection mechanisms, coupled with extended fact collection modules for sudoers facts, cron facts, local user and group facts, running process facts, and listening port facts.  Additionally, there is a mechanism for identifying application workloads running on each host (application signatures/profiles).  
